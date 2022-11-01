@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import { useSelector } from "react-redux";
+import Routing from "./routing/Routing";
+
 
 function App() {
+
+  const theme = useSelector(state => state.theme.theme)
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    // height 1000vh
+    <div className='bg-[#F6F6F6] max-w-screen-xl mx-auto '> 
+    <Routing />
     </div>
   );
 }
